@@ -1,0 +1,143 @@
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('assets/background.jpg');
+    overflow-x: hidden;
+  }
+span{
+  color: gold;
+}
+  .background-layer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #000000, #26594f);
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    background: #1e3c72; /* Solid blue background */
+    transition: transform 0.2s ease-out, filter 0.2s ease-out;
+    filter: blur(0px);
+  }
+
+  .container {
+    padding: 50px;
+    text-align: center;
+    color: white;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: linear-gradient(135deg, #ffffff22, #ffffff11);
+    border: 1px solid #ffffff33;
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .card h2 {
+    margin-top: 10px;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+
+  .card:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(100%, 100%);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .project-detail {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    display: none;
+    position: relative;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  #close-detail {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4444;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  /* Custom cursor styles */
+  body {
+    cursor: none; /* Hides the default cursor */
+  }
+
+  .cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Make it rounded */
+    background: rgba(0, 255, 255, 0.7); /* Cyan color */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  /* For background overlay with additional layers */
