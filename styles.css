@@ -3,7 +3,7 @@
     padding: 0;
     height: 100%;
     font-family: 'Segoe UI', sans-serif;
-    background: url('assets/background.jpg');
+    background: url('assets/Picsart_25-05-05_18-29-23-660.png');
     overflow-x: hidden;
   }
 span{
@@ -28,7 +28,7 @@ span{
     height: 100vh;
     pointer-events: none;
     z-index: -1;
-    background: #1e3c72; /* Solid blue background */
+    background: #121213; /* Solid blue background */
     transition: transform 0.2s ease-out, filter 0.2s ease-out;
     filter: blur(0px);
   }
